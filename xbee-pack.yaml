@@ -20,9 +20,12 @@ dependencies:
   - oniguruma
 
 provision:
-  - url:
-      from: https://github.com/jqlang/jq/archive/refs/tags/jq-{{ .version }}.tar.gz
-      todir: "{{ .xbee.src }}"
+  - shell:
+      cmd: git clone https://github.com/jqlang/jq.git
+      directory: "{{ .xbee.src }}"
+  - shell:
+      cmd: git checkout jq-{{ .version }}
+      directory: "{{ .xbee.src }}/jq"
 
 
 build:
