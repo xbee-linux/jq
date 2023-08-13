@@ -8,7 +8,7 @@ description: |
 var:
   version: 1.6
 
-dependencies:
+builders:
   - automake
   - autoconf
   - m4
