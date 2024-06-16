@@ -15,9 +15,11 @@ builders:
   - bison
   - flex
   - libtool
-  - git
-  - curl
   - oniguruma
+
+dependencies:
+  - curl
+  - git
 
 provision:
   - shell:
