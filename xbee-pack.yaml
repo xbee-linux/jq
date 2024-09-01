@@ -6,7 +6,8 @@ description: |
   jq is a lightweight and flexible command-line JSON processor.
 
 var:
-  version: 1.6
+  xbee:
+    version: 1.6
 
 builders:
   - automake
@@ -26,7 +27,7 @@ provision:
       cmd: git clone https://github.com/jqlang/jq.git
       directory: "{{ .xbee.src }}"
   - shell:
-      cmd: git checkout jq-{{ .version }}
+      cmd: git checkout jq-{{ .xbee.version }}
       directory: "{{ .xbee.src }}/jq"
 
 
